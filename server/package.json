@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "// TODO: Add your start script if you are using a front-end JS framework": "",
+    "start": "node index.js",
+    "dev": "npm run start"
+  },
+  "devDependencies": {
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "sqlite3": "^4.0.7"
+  },
+  "keywords": [],
+  "description": "",
+  "proxy": "http://localhost:3001",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,11 +1,8 @@
 /node_modules
-client/node_modules
-server/node_modules
-
 /coverage
 /build
 
-server/database.sqlite3
+database.sqlite3
 
 .DS_Store
 
