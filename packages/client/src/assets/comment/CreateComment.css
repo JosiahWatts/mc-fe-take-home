@@ -1,0 +1,27 @@
+.create-comment {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+}
+
+.create-comment__body {
+  padding: 0.75rem 0.5rem;
+}
+
+.create-comment__body input {
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.create-comment__body textarea {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.create-comment__footer {
+  border-top: 1px solid gainsboro;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}

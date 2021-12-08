@@ -4,7 +4,6 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "// TODO: Add your start script if you are using a front-end JS framework": "",
     "start": "node index.js",
     "dev": "npm run start"
   },

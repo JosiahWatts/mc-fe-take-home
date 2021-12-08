@@ -1,0 +1,23 @@
+:root {
+  --brand-color-700: #1d4ed8;
+  --brand-color-600: #2563eb;
+  --brand-color-500: #3b82f6;
+
+  --font-color-black: #000000;
+  --font-color-normal: #444444;
+  --font-color-light: #64748b;
+
+  --border-color: #cbd5e1;
+}
+
+.font-color-black {
+  color: var(--font-color-black);
+}
+
+.font-color-normal {
+  color: var(--font-color-normal);
+}
+
+.font-color-light {
+  color: var(--font-color-light);
+}

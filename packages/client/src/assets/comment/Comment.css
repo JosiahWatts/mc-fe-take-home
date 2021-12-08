@@ -1,0 +1,38 @@
+.comment {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.comment__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment__header__name-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.comment__header__name-wrapper__avatar {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.8rem;
+  color: var(--brand-color-600);
+}
+
+.comment__header__name-wrapper__name {
+  font-weight: 500;
+}
+
+.comment__date {
+  color: var(--font-color-light);
+  font-size: var(--font-size-small);
+  display: block;
+  margin-top: 1rem;
+}
+
+.comment__body {
+  margin-top: 1rem;
+}

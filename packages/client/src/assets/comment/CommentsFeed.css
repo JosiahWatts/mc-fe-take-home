@@ -1,0 +1,14 @@
+.feed {
+  display: flex;
+  justify-content: center;
+}
+
+.feed__inner-wrapper {
+  flex: 1;
+  max-width: 650px;
+}
+
+.feed__title {
+  margin-bottom: 2rem;
+  color: var(--font-color-black);
+}
