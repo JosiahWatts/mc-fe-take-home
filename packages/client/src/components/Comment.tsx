@@ -1,6 +1,6 @@
-import React from "react";
+import { format, parseISO } from "date-fns";
+import React, { useMemo } from "react";
 import { CommentType } from "../api/CommentApi";
-
 import "../styles/comment/Comment.css";
 
 export interface CommentProps {
@@ -10,6 +10,11 @@ export interface CommentProps {
 function Comment(props: CommentProps) {
   const { comment } = props;
   const { name, created, message } = comment;
+
+  const createdDate = useMemo(() => {
+    const parsedTime = parseISO(created);
+    return format(parsedTime, "EEEE 'at' h:mmaaa");
+  }, [created]);
 
   return (
     <article className="comment">
@@ -33,7 +38,7 @@ function Comment(props: CommentProps) {
         </div>
       </div>
       <p className="comment__body">{message}</p>
-      <span className="comment__date">{created}</span>
+      <span className="comment__date">{createdDate}</span>
     </article>
   );
 }
