@@ -61,6 +61,21 @@ We recommend spending up to four hours on this assignment. If you don't get ever
 ### Run in Development
 
 ```
+1. First install global project dependencies:
+
 $ npm install
+
+2. Next, install package specific dependencies:
+
+$ cd packages/client
+$ npm install
+
+$ cd ..
+$ cd packages/server
+$ npm install
+
+3. Finally, move to project directory and run the client and server:
+
+$ cd ../..
 $ npm run dev
 ```
