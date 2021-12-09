@@ -1,14 +1,14 @@
 import React from "react";
 import CommentsFeed from "./components/CommentsFeed";
 
-import "./assets/base.css";
-import "./assets/typography.css";
-import "./assets/colors.css";
-import "./assets/button.css";
-import "./assets/utility.css";
-import "./assets/form.css";
+import "./styles/base.css";
+import "./styles/typography.css";
+import "./styles/colors.css";
+import "./styles/button.css";
+import "./styles/utility.css";
+import "./styles/form.css";
 
-import "./assets/App.css";
+import "./styles/App.css";
 
 function App() {
   return (

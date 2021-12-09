@@ -22,4 +22,11 @@ export const mockComments: CommentType[] = [
     message:
       "Yr hella art party stumptown voluptate. Chartreuse shoreditch pitchfork ut mollit sartorial irure typewriter bespoke hot chicken normcore put a bird on it.",
   },
+  {
+    id: 4,
+    name: "Timmy Joe",
+    created: new Date().toISOString(),
+    message:
+      "Yr hella art party stumptown voluptate. Chartreuse shoreditch pitchfork ut mollit sartorial irure typewriter bespoke hot chicken normcore put a bird on it.",
+  },
 ];

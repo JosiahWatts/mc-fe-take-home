@@ -6,13 +6,13 @@ export class CommentApi {
   }
 
   public static getCommentById(id: number) {
-    return fetch(`${ApiUtils.getBaseApiUrl()}/comments/${id}`, {
+    return fetch(`${ApiUtils.getBaseApiUrl()}/getComment/${id}`, {
       headers: ApiUtils.getBaseApiHeaders(),
     });
   }
 
-  public static createComment(comment: CommentType) {
-    return fetch(`${ApiUtils.getBaseApiUrl()}/comments`, {
+  public static createComment(comment: Partial<CommentType>) {
+    return fetch(`${ApiUtils.getBaseApiUrl()}/createComment`, {
       method: "POST",
       headers: ApiUtils.getBaseApiHeaders(),
       body: JSON.stringify(comment),

@@ -1,0 +1,17 @@
+.comments-list {
+  overflow: auto;
+  max-height: calc(100vh - 600px);
+}
+
+.comments-list--empty {
+  text-align: center;
+}
+
+.comments-list--empty__title {
+  font-weight: 500;
+}
+
+.comments-list--empty__subtitle {
+  margin-top: 0.25rem;
+  color: var(--font-color-light);
+}

@@ -4,6 +4,8 @@ export class ApiUtils {
   }
 
   public static getBaseApiHeaders() {
-    return {};
+    return {
+      "content-type": "application/json",
+    };
   }
 }

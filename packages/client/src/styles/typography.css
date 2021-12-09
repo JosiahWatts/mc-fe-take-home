@@ -8,6 +8,7 @@
   --font-size-h6: 1rem;
   --font-size-small: 0.875rem;
   --font-size-tiny: 0.75rem;
+  --font-size-medium: 1.1rem;
   --font-size-large: 1.25rem;
   --font-size-xlarge: 1.5rem;
 
@@ -56,6 +57,10 @@ h6 {
   font-size: var(--font-size-large);
 }
 
+.font-size-medium {
+  font-size: var(--font-size-medium);
+}
+
 .font-size-base {
   font-size: var(--font-size-base);
 }
@@ -66,4 +71,8 @@ h6 {
 
 .font-size-tiny {
   font-size: var(--font-size-tiny);
+}
+
+.text-center {
+  text-align: center;
 }

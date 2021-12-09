@@ -1,43 +1,48 @@
 import React, { useEffect } from "react";
 import { CommentApi, CommentType } from "../api/CommentApi";
-import { mockComments } from "../data/mockComments";
 import useInterval from "../hooks/useInterval";
+import "../styles/comment/CommentsFeed.css";
 import CommentsList from "./CommentsList";
 import CreateComment from "./CreateComment";
 
-import "../assets/comment/CommentsFeed.css";
-
-const COMMENT_REFRESH_INTERVAL = 5000;
-
-const fetchComments = CommentApi.getComments();
+const COMMENT_REFRESH_INTERVAL = 3000;
 
 function CommentsFeed() {
-  const [comments, setComments] = React.useState<CommentType[]>(mockComments);
+  const [comments, setComments] = React.useState<CommentType[]>([]);
+  const [isLoading, setIsLoading] = React.useState(false);
 
-  // useInterval(async () => {
-  //   console.log("Checking for new comments");
-  //   const result = await CommentApi.getComments();
-  //   const comments = await result.json();
-  //   setComments(comments);
-  // }, COMMENT_REFRESH_INTERVAL);
+  useInterval(async () => {
+    if (isLoading) return;
 
-  useEffect(() => {
-    fetchComments
-      .then((res) => res.json())
-      .then((comments) => setComments(comments))
-      .catch((err) => console.error(err));
+    await fetchComments();
+  }, COMMENT_REFRESH_INTERVAL);
+
+  const fetchComments = React.useCallback(async () => {
+    setIsLoading(true);
+
+    try {
+      const result = await CommentApi.getComments();
+      const comments = await result.json();
+      setComments(comments);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("could not fetch comments", error);
+      setIsLoading(false);
+    }
   }, []);
 
-  const addComment = (message: string) => {
-    const newComment = {
-      id: comments.length + 1,
-      name: "John Doe",
-      created: new Date().toISOString(),
-      message,
-    };
-
-    setComments([...comments, newComment]);
+  const addComment = async (message: string, name: string) => {
+    try {
+      await CommentApi.createComment({ message, name });
+      await fetchComments();
+    } catch (err) {
+      console.error("could not create comment", err);
+    }
   };
+
+  useEffect(() => {
+    fetchComments();
+  }, [fetchComments]);
 
   return (
     <section className="feed">

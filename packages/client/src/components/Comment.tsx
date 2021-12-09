@@ -1,7 +1,7 @@
 import React from "react";
 import { CommentType } from "../api/CommentApi";
 
-import "../assets/comment/Comment.css";
+import "../styles/comment/Comment.css";
 
 export interface CommentProps {
   comment: CommentType;

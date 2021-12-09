@@ -1,7 +1,7 @@
 .create-comment {
   display: flex;
   flex-direction: column;
-  border: 1px solid gainsboro;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .create-comment__footer {
-  border-top: 1px solid gainsboro;
+  border-top: 1px solid var(--border-color-light);
   display: flex;
   justify-content: flex-end;
   padding: 1rem;

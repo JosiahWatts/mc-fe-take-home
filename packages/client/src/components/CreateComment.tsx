@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-import "../assets/comment/CreateComment.css";
+import "../styles/comment/CreateComment.css";
 
 export interface CreateCommentProps {
-  onSubmit: (message: string) => void;
+  onSubmit: (message: string, name: string) => void;
 }
 
 function CreateComment({ onSubmit }: CreateCommentProps) {
@@ -16,7 +16,7 @@ function CreateComment({ onSubmit }: CreateCommentProps) {
       return;
     }
 
-    onSubmit(message);
+    onSubmit(message, name);
     setMessage("");
   };
 

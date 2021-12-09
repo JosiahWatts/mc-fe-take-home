@@ -10,9 +10,13 @@ body,
   height: 100%;
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 header {
   padding: 2rem 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 header .title {
