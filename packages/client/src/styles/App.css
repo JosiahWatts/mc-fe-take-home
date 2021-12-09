@@ -17,6 +17,7 @@ body {
 header {
   padding: 2rem 3rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 header .title {
@@ -27,4 +28,14 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 3rem;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 2rem 1.5rem 0.5rem 1.5rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
 }

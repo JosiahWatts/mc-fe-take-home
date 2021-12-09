@@ -19,7 +19,7 @@ function CommentsList({ comments }: CommentsListProps) {
           </p>
         </div>
       ) : (
-        <ul className="comments-list">
+        <ul className="comments-list" aria-label="list of comments">
           {comments.map((comment) => (
             <Comment key={comment.id} comment={comment} />
           ))}
