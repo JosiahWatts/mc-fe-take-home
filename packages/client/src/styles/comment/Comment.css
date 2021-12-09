@@ -30,9 +30,9 @@
   color: var(--font-color-light);
   font-size: var(--font-size-small);
   display: block;
-  margin-top: 1rem;
 }
 
 .comment__body {
   margin-top: 1rem;
+  margin-left: 2.5rem;
 }

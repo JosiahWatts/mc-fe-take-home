@@ -36,9 +36,9 @@ function Comment(props: CommentProps) {
           </svg>
           <span className="comment__header__name-wrapper__name">{name}</span>
         </div>
+        <span className="comment__date">{createdDate}</span>
       </div>
       <p className="comment__body">{message}</p>
-      <span className="comment__date">{createdDate}</span>
     </article>
   );
 }
