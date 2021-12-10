@@ -35,4 +35,5 @@
 .comment__body {
   margin-top: 1rem;
   margin-left: 2.5rem;
+  white-space: pre-wrap;
 }

@@ -11,8 +11,3 @@
   padding: 2rem;
   border-radius: 8px;
 }
-
-.feed__title {
-  margin-bottom: 2rem;
-  color: var(--font-color-black);
-}

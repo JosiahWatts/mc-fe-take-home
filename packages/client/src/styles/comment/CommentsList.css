@@ -1,6 +1,40 @@
+.comments-list-container__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.comments-list-container__heading__title {
+  color: var(--font-color-black);
+}
+
+.comments-list-container__heading__new-comments-btn {
+  position: relative;
+}
+
+.comments-list-container__heading__new-comments-btn::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.comments-list-container__heading__new-comments-btn__icon {
+  height: 28px;
+  width: 28px;
+  color: var(--brand-color-700);
+}
+
 .comments-list {
   overflow: auto;
   max-height: calc(100vh - 600px);
+  scroll-behavior: smooth;
 }
 
 .comments-list--empty {

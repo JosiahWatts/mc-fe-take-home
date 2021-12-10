@@ -12,7 +12,7 @@ function CreateComment({ onSubmit }: CreateCommentProps) {
   const [isFormDisabled, setFormDisabled] = React.useState(true);
 
   const addComment = () => {
-    if (message.trim().length < 1 && name.trim().length < 1) {
+    if (message.trim().length < 1 || name.trim().length < 1) {
       return;
     }
 
@@ -23,13 +23,6 @@ function CreateComment({ onSubmit }: CreateCommentProps) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     addComment();
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      addComment();
-    }
   };
 
   useEffect(() => {
@@ -69,7 +62,6 @@ function CreateComment({ onSubmit }: CreateCommentProps) {
                 setMessage(e.target.value);
               }}
               placeholder={`Hey, what's on your mind?`}
-              onKeyDown={handleKeyPress}
             ></textarea>
           </div>
         </div>
