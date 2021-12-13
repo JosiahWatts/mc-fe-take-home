@@ -6,14 +6,14 @@ import { mockComments } from "../data/mockComments";
 afterEach(cleanup);
 
 it("renders empty list text when there are no comments", () => {
-    render(<CommentsList comments={[]} />);
+    render(<CommentsList newComments={[]} comments={[]} />);
     
     expect(screen.getByText("No Comments Found")).toBeInTheDocument();
     expect(screen.queryByText("comments-list", { selector: 'ul'})).toBeNull();
 });
 
 it("renders a list of comments", () => {
-    render(<CommentsList comments={mockComments} />);
+    render(<CommentsList newComments={[]} comments={mockComments} />);
     
     const list = screen.getByRole("list", { selector: 'ul'});
     
@@ -21,7 +21,7 @@ it("renders a list of comments", () => {
 });
 
 it("renders a list of comments with the correct number of comments", () => {
-    render(<CommentsList comments={mockComments} />);
+    render(<CommentsList newComments={[]} comments={mockComments} />);
     
     const list = screen.getByRole("list", { selector: 'ul'});
     
